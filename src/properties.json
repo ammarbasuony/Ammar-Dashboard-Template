@@ -1,0 +1,14 @@
+{
+  "API_URL": "http://localhost:8000",
+  "appearence": {
+    "primary_color": "#7476ed",
+    "primary_color_dimmed": "#a8a9d8",
+    "secondary_color": "#3a3b7b",
+    "logo": "images/logo.png",
+    "favicon": "images/favicon.png"
+  },
+  "app_info": {
+    "name": "Dashboard Starter",
+    "description": "Dashboard Starter - By Ammar Yaser"
+  }
+}
