@@ -19,7 +19,7 @@ const Users = () => {
   const [allData, setAllData] = useState(["item"]);
   const [name, setName] = useState("");
   const [isSearching, setIsSearching] = useState(false);
-  const [isFetching, setIsFetching] = useState(true);
+  const [isFetching, setIsFetching] = useState(false);
   const [noData, setNoData] = useState(false);
 
   const fetchData = async () => {
