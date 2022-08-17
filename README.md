@@ -4,9 +4,10 @@ This template is created to help you get started with a well-built Dashboard.\
 Developed with:
 
 - [React](https://reactjs.org/)
-- [React-Router](https://react-router.now.sh/)
+- [React-Router](https://reactrouter.com/)
 - [React-Redux](https://react-redux.js.org/)
 - [Redux](https://redux.js.org/)
+- [Axios](https://github.com/axios/axios)
 
 ## Available Scripts
 
