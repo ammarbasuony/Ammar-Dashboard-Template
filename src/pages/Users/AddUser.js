@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// Actions
+import { saveUsersData } from "../../store/actions";
+
 // Components
 import Header from "../../components/Header";
 
@@ -13,6 +16,7 @@ import { leftArrowIcon, spinnerIcon } from "../../helpers/icons";
 const AddUser = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { users } = useSelector((state) => state.dataReducer);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,9 +24,25 @@ const AddUser = () => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    if (password.trim().length === 0)
+      return toast.error("Password is required");
+
     e.preventDefault();
     setLoading(true);
+    // Add User API
+    setLoading(false);
 
+    const user = {
+      id: Math.random() * 100, // Get From Add API Response
+      name,
+      email,
+      password,
+    };
+
+    // return if success is false
+    user.createdAt = new Date(); // Get From Add API Response
+    user.updatedAt = new Date(); // Get From Add API Response
+    dispatch(saveUsersData([...users, user]));
     toast.success("User added successfully");
     navigate("/users");
   };
