@@ -5,6 +5,9 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// Actions
+import { saveAuthData } from "../../store/actions";
+
 // Properties
 import properties from "properties.json";
 

@@ -1,8 +1,6 @@
-import { CHANGE_PAGE_TITLE } from "./types";
+import { SAVE_AUTH_DATA } from "./types";
 
-export const changePageTitle = (title) => {
-  return {
-    type: CHANGE_PAGE_TITLE,
-    payload: title,
-  };
-};
+export const saveAuthData = (authData) => ({
+  type: SAVE_AUTH_DATA,
+  payload: authData,
+});

@@ -10,5 +10,8 @@
   "app_info": {
     "name": "Dashboard Starter",
     "description": "Dashboard Starter - By Ammar Yaser"
+  },
+  "storage": {
+    "cookie_name": "dashboard-token"
   }
 }

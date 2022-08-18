@@ -24,7 +24,7 @@ const Sidebar = () => {
 
   const logout = (e) => {
     e.preventDefault();
-    cookies.remove("admin_token");
+    cookies.remove(properties.storage.cookie_name);
     navigate("/login");
   };
 

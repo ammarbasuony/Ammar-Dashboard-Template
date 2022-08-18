@@ -3,7 +3,7 @@ import cookies from "js-cookie";
 import properties from "../properties.json";
 
 const api = () => {
-  const token = cookies.get("admin_token");
+  const token = cookies.get(properties.storage.cookie_name);
   return axios.create({
     baseURL: properties.API_URL,
     headers: {

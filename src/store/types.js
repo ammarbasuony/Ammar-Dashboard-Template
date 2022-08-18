@@ -1,1 +1,1 @@
-export const CHANGE_PAGE_TITLE = "CHANGE_PAGE_TITLE";
+export const SAVE_AUTH_DATA = "SAVE_AUTH_DATA";
