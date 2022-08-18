@@ -49,7 +49,7 @@ const Users = () => {
       <Header title="Users" />
 
       <div className="pb-3">
-        <div className="lg:flex block flex-row mb-1 sm:mb-0 justify-between w-full">
+        <div className="md:flex block flex-row mb-1 sm:mb-0 justify-between w-full">
           <Link
             to="/users/add"
             className="flex items-center justify-center gap-2 px-4 py-2 text-base font-semibold text-white bg-slate-500 rounded-lg shadow-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-primary-dimmed"
@@ -58,7 +58,7 @@ const Users = () => {
           </Link>
           <div className="text-end">
             <form
-              className="flex flex-col lg:mt-0 mt-6 md:flex-row md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center"
+              className="flex flex-col md:mt-0 mt-6 md:flex-row md:w-full lg:max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center"
               onSubmit={(e) => filterByName(e)}
             >
               <div className="relative">
