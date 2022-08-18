@@ -3,6 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// Actions
+import { saveUsersData } from "../../store/actions";
+
 // Assets
 import { editIcon, deleteIcon } from "../../helpers/icons";
 
@@ -12,13 +15,15 @@ import { formatDate } from "../../helpers/functions";
 // Components
 import Modal from "../../components/Modal";
 
-const UserItem = () => {
+const UserItem = ({ user }) => {
   const dispatch = useDispatch();
+  const { users } = useSelector((state) => state.dataReducer);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDelete = async () => {
+    dispatch(saveUsersData(users.filter((u) => u.id !== user.id)));
     setIsModalOpen(false);
-    toast.success("Timezone deleted successfully");
+    toast.success("User deleted successfully");
   };
 
   return (

@@ -1,1 +1,4 @@
 export const SAVE_AUTH_DATA = "SAVE_AUTH_DATA";
+
+export const SAVE_DASHBOARD_DATA = "SAVE_DASHBOARD_DATA";
+export const SAVE_USERS_DATA = "SAVE_USERS_DATA";
