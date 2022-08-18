@@ -29,17 +29,18 @@ const AddUser = () => {
 
     e.preventDefault();
     setLoading(true);
-    // Add User API
-    setLoading(false);
 
     const user = {
-      id: Math.random() * 100, // Get From Add API Response
       name,
       email,
       password,
     };
+    
+    // Add User API
+    setLoading(false);
 
     // return if success is false
+    user.id = Math.random() * 100; // Get From Add API Response
     user.createdAt = new Date(); // Get From Add API Response
     user.updatedAt = new Date(); // Get From Add API Response
     dispatch(saveUsersData([...users, user]));
