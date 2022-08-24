@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 // Actions
 import { saveUsersData } from "../../store/actions";
 
+// Helpers
+import { isValidEmail } from "helpers/functions";
+
 // Components
 import Header from "../../components/Header";
 
@@ -24,10 +27,14 @@ const AddUser = () => {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validation
     if (password.trim().length === 0)
       return toast.error("Password is required");
 
-    e.preventDefault();
+    if (!isValidEmail(email)) return toast.error("Invalid email");
+
     setLoading(true);
 
     const user = {
@@ -35,7 +42,7 @@ const AddUser = () => {
       email,
       password,
     };
-    
+
     // Add User API
     setLoading(false);
 

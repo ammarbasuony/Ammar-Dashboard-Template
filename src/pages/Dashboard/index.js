@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-// Properties
-import properties from "../../properties.json";
+// Actions
+import { saveDashboardData } from "../../store/actions";
 
 // Components
 import Header from "../../components/Header";
 import Counter from "./Counter";
+import Loading from "../../components/Loading";
 
 // Icons
 import { userIcon, clockIcon } from "../../helpers/icons";
@@ -21,7 +23,7 @@ const Dashboard = () => {
           todayCount={98}
           totalCount={254}
           icon={userIcon("text-primary", 20, 20)}
-          iconBg="bg-blue-200"
+          iconBg="bg-primary-dimmed"
         />
         <Counter
           title="Timezones"
