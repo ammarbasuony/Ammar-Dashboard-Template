@@ -47,7 +47,7 @@ const Sidebar = () => {
           <img
             src={require(`assets/${properties.appearence.logo}`)}
             alt="Timezones App"
-            className="max-w-[180px] max-h-48"
+            className="max-w-[180px] max-h-48 relative lg:left-0 left-[-25px]"
           />
         </div>
         <nav className="mt-6">
